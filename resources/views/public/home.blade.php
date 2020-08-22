@@ -4,7 +4,7 @@
         <div class="hero-container">
             <h1>Letter to God</h1>
             <h2>Please, fill out the for below to get the Answer!</h2>
-            <form role="form" class="php-email-form" style="width: 600px;" id="questionForm">
+            <form role="form" class="php-email-form" id="questionForm">
                 <input type="hidden" name="_token" id="_token" value="<?php echo csrf_token(); ?>">
                 <div class="row">
                     <div class="col-md-12 form-group">
@@ -12,7 +12,7 @@
                             <input type="radio" id="inscript" name="layout" onclick="setTypingLayout('inscript')"/>INSCRIPT &nbsp;&nbsp;
                             <input type="radio" id="transliteration" name="layout" checked="true" onclick="setTypingLayout('transliteration')"/>Transliteration
                         </div>
-                        <select class="form-control" id="language" style="font-family:verdna,Arial;font-size: 15px;width: 200px; margin: 0px 200px ;">
+                        <select class="form-control" id="language" style="font-family:verdna,Arial;font-size: 15px;">
                             <option value="en_in">English</option>
                             <option value="hi_in" selected="selected" alt="Type in Hindi">हिन्दी</option>
                             <option value="tl_in" alt="Type in Telugu">తెలుగు</option>
@@ -21,7 +21,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12 form-group">
-                        <input type="text" autocomplete="off" name="name" style="margin: 0px 180px ;" class="form-control" id="name" placeholder="Your Name" required />
+                        <input type="text" autocomplete="off" name="name" class="form-control" id="name" placeholder="Your Name" required />
                         <div class="validate"></div>
                     </div>
                 </div>
@@ -152,7 +152,7 @@
                     <li>
                         <a data-toggle="collapse" href="#faq2" class="collapsed"> What are the aspirations of Brahma Kumaris? <i class="bx bx-down-arrow-alt icon-show"></i><i class="bx bx-x icon-close"></i></a>
                         <div id="faq2" class="collapse" data-parent=".faq-list">
-                                <ul>
+                            <ul>
 
                                 <li>To encourage a deeper understanding of the individual's place and purpose within the broader context of life.</li>
                                 <li>To reaffirm the spiritual identity, inherent goodness, dignity and worth of the human being.</li>
@@ -291,8 +291,8 @@
                     }
                 });
             }else{
-             }
-       });
+            }
+        });
 
         $(document).ready(function () {
             var locale = null;
@@ -337,5 +337,3 @@
         };
     </script>
 @endsection
-
-
