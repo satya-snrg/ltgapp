@@ -10,6 +10,6 @@ class Letter extends Model
     protected $table = "letters";
 
     protected $fillable = [
-        'question','message'
+        'question','message','phone','email'
     ];
 }
