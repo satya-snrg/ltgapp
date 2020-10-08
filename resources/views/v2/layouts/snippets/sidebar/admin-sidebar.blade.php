@@ -28,7 +28,13 @@
     <li class="nav-item">
         <a class="nav-link" href="{{ URL::to('/letters') }}">
             <i class="fas fa-fw fa-user"></i>
-            <span>Letter to God</span></a>
+            <span>Letter From God</span></a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{ URL::to('/msg-users') }}">
+            <i class="fas fa-fw fa-users"></i>
+            <span>Message Subscribers</span></a>
     </li>
 
     <li class="nav-item">

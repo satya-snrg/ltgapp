@@ -8,9 +8,14 @@ Route::get('user-logout', function(){
 });
 Route::post('post-question', 'MessageController@postQuestion');
 Route::post('contactform', 'HomeController@contactUs');
+
+Route::post('msgsubscription', 'HomeController@msgFrDaySub');
+
 Route::resource('messages', 'MessageController')->middleware(['auth']);
 Route::get('contactformsubmissions', 'HomeController@contactFormSubmissions')->middleware(['auth']);
 Route::get('letters', 'MessageController@letters')->middleware(['auth']);
+Route::get('msg-users', 'MessageController@subscibedUsers')->middleware(['auth']);
+
 Route::post('business-user-home', 'HomeController@businessUserHome')->middleware(['auth']);
 Route::get('/user-home', 'HomeController@businessUserHome')->middleware(['auth']);
 Route::get('/admin-home', 'HomeController@AdminUserHome')->middleware(['auth']);

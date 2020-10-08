@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Auth;
 use App\ContactForm;
+use App\MsgForTheDaySubscription;
 
 class HomeController extends Controller
 {
@@ -77,6 +78,22 @@ class HomeController extends Controller
         $record->email = $request->email;
         $record->subject = $request->subject;
         $record->message = $request->message;;
+        $record->save();
+        return "success";
+    }
+
+
+    public function msgFrDaySub(Request $request){
+        $request->validate([
+            'name' => 'required',
+//            'email' => 'required',
+//            'phone' => 'required',
+        ]);
+
+        $record = new MsgForTheDaySubscription();
+        $record->name = $request->name;
+        $record->email = $request->has('email') ? $request->email : '';
+        $record->phone = $request->has('phone') ? $request->phone : '';
         $record->save();
         return "success";
     }

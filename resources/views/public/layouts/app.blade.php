@@ -31,6 +31,7 @@
     <!-- Template Main CSS File -->
     <link href="{{ asset('public_theme/assets/css/style.css') }}" rel="stylesheet">
     <link rel='stylesheet' type='text/css' href='https://gisttransserver.in/Fonts/css/cdac-gist-fonts.css'>
+
 </head>
 
 <body>
@@ -48,7 +49,8 @@
             <ul>
                 <li class="active"><a href="#header">Home</a></li>
                 <li><a href="{{ URL::to('/login') }}">Login</a></li>
-                <li><a href="#why-us">Why Us</a></li>
+                <li><a href="#why-us">About Us</a></li>
+                <li><a href="#msgfortheday">Message for the Day</a></li>
 
                 <li><a href="#contact">Contact Us</a></li>
             </ul>
@@ -79,6 +81,7 @@
 <script src="{{ asset('public_theme/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{ asset('public_theme/assets/vendor/jquery.easing/jquery.easing.min.js') }}"></script>
 <script src="{{ asset('public_theme/assets/vendor/php-email-form/validate.js') }}"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 <!-- Template Main JS File -->
 <script src="{{ asset('public_theme/assets/js/main.js') }}"></script>

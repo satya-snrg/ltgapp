@@ -1,0 +1,20 @@
+New Table
+CREATE TABLE `msgfortheday_subscriptions` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `phone` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+);
+
+
+ALTER TABLE `msgfortheday_subscriptions`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `msgfortheday_subscriptions`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+
+ALTER TABLE `letters` ADD `email` VARCHAR(255) NULL AFTER `name`, ADD `phone` VARCHAR(25) NULL AFTER `email`;
+

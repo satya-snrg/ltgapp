@@ -1,1 +1,7 @@
 /node_modules
+.idea/vcs.xml
+.idea/ltgapp.iml
+.idea/phpunit.xml
+.idea/php.xml
+.idea/modules.xml
+.idea/misc.xml

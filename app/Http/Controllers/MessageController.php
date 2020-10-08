@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Letter;
 use Illuminate\Http\Request;
 use App\Message;
+use App\MsgForTheDaySubscription;
 
 class MessageController extends Controller
 {
@@ -152,6 +153,8 @@ class MessageController extends Controller
 
         $log = new Letter();
         $log->name = $request->has('name') ? $request->name : '';
+        $log->email = $request->has('email') ? $request->email : '';
+        $log->phone = $request->has('phone') ? $request->phone : '';
         $log->question = $request->has('question') ? $request->question : '';
         $log->message = $msg;
         $log->save();
@@ -162,4 +165,11 @@ class MessageController extends Controller
         $records = Letter::orderBy('id', 'DESC')->paginate(10);
         return view('v2.letters.index',compact('records'));
     }
+
+    public function subscibedUsers(){
+        $records = MsgForTheDaySubscription::orderBy('id', 'DESC')->paginate(10);
+        return view('v2.message_subscribers.index',compact('records'));
+    }
+
+
 }

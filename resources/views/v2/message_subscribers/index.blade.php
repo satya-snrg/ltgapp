@@ -3,7 +3,7 @@
     @parent
     <div class="card mb-12">
         <div class="card-header">
-            <h3>Letter From God</h3>
+            <h3>Message for the Day: Subscribed Users</h3>
         </div>
         <div class="card-body">
             @if ($message = Session::get('success'))
@@ -13,21 +13,17 @@
             @endif
             <table class="table table-bordered">
                 <tr>
-                    <th>Date</th>
                     <th>Name</th>
-                    <th>Phone</th>
                     <th>Email</th>
-                    <th>Question</th>
-                    <th>Response Message</th>
+                    <th>Phone</th>
+                    <th>Joined</th>
                 </tr>
                 @foreach ($records as $record)
                     <tr>
-                        <td>{{ $record->created_at }}</td>
                         <td>{{ $record->name }}</td>
                         <td>{{ $record->email }}</td>
                         <td>{{ $record->phone }}</td>
-                        <td>{{ $record->question }}</td>
-                        <td>{{ $record->message }}</td>
+                        <td>{{ $record->created_at }}</td>
                     </tr>
                 @endforeach
             </table>
