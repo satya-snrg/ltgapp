@@ -79,6 +79,32 @@
     <main id="main">
         <!-- ======= About Section ======= -->
 
+        <section id="about" class="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <img src="<?php echo e(asset('public_theme/assets/img/rajayogamed.jpg')); ?>" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-6 pt-4 pt-lg-0">
+                        <h3>BRAHMA KUMARIS NAGARJUNA HILLS</h3>
+                        <p class="font-italic">
+                            FOR PEACE OF MIND & SELF DEVELOPMENT
+                        </p>
+                        <ul>
+                            <li><i class="bx bx-check-double"></i> RAJA YOGA MEDITATION.</li>
+                            <li><i class="bx bx-check-double"></i> POSITIVE THINKING.</li>
+                            <li><i class="bx bx-check-double"></i> STREE FREE LIVING.</li>
+                            <li><i class="bx bx-check-double"></i> MANAGING RELATIONS.</li>
+                            <li><i class="bx bx-check-double"></i> SPIRITUAL COUNSELLING.</li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End About Section -->
+
+        <hr>
         <section id="" class="about">
             <div class="container">
                 <div class="row">
@@ -106,32 +132,9 @@
 
             </div>
         </section><!-- End About Section -->
-        <hr>
+       
 
-        <section id="about" class="about">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <img src="<?php echo e(asset('public_theme/assets/img/rajayogamed.jpg')); ?>" class="img-fluid" alt="">
-                    </div>
-                    <div class="col-lg-6 pt-4 pt-lg-0">
-                        <h3>BRAHMA KUMARIS NAGARJUNA HILLS</h3>
-                        <p class="font-italic">
-                            FOR PEACE OF MIND & SELF DEVELOPMENT
-                        </p>
-                        <ul>
-                            <li><i class="bx bx-check-double"></i> RAJA YOGA MEDITATION.</li>
-                            <li><i class="bx bx-check-double"></i> POSITIVE THINKING.</li>
-                            <li><i class="bx bx-check-double"></i> STREE FREE LIVING.</li>
-                            <li><i class="bx bx-check-double"></i> MANAGING RELATIONS.</li>
-                            <li><i class="bx bx-check-double"></i> SPIRITUAL COUNSELLING.</li>
-
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </section><!-- End About Section -->
+        
         <!-- ======= Why Us Section ======= -->
         <section id="why-us" class="why-us section-bg">
             <div class="container">
