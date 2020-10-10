@@ -115,7 +115,7 @@
                         <img src="<?php echo e(asset('public_theme/assets/img/rajayogamed.jpg')); ?>" class="img-fluid" alt="">
                     </div>
                     <div class="col-lg-6 pt-4 pt-lg-0">
-                        <h3>BRAHMA KUMARIS NAGARJUNA MANAGEMENT CENTRE</h3>
+                        <h3>BRAHMA KUMARIS NAGARJUNA HILLS</h3>
                         <p class="font-italic">
                             FOR PEACE OF MIND & SELF DEVELOPMENT
                         </p>
@@ -242,8 +242,8 @@
                             </div>
                             <div class="form-group">
                                 <input type="text" autocomplete="off" class="form-control" name="msgsub_contact" id="msgsub_contact"
-                                       placeholder="Your Email / Phone" required
-                                       data-msg="Please enter a valid Email / Phone"/>
+                                       placeholder="Your Email" required
+                                       data-msg="Please enter a valid Email"/>
                                 <div class="validate"></div>
                             </div>
                             <div class="mb-3">
@@ -531,21 +531,21 @@
             var _email = '';
             var _phone = '';
 
-            if(isValidPhone(usercontactinfo)){
-                console.log('phone validated');
-                _phone = usercontactinfo;
-                usercontactinfoValidationFlag = true;
-            }else if(isValidEmail(usercontactinfo)){
+            // if(isValidPhone(usercontactinfo)){
+            //     console.log('phone validated');
+            //     _phone = usercontactinfo;
+            //     usercontactinfoValidationFlag = true;
+            // }
+
+           if(!isValidEmail(usercontactinfo)){
                 console.log('email validated');
                 _email = usercontactinfo;
-                usercontactinfoValidationFlag = true;
+                //usercontactinfoValidationFlag = true;
+               focusElem('msgsub_contact');
+               swal('Please enter valid Email', '', 'error');
+               return false;
             }
 
-            if (!usercontactinfoValidationFlag) {
-                focusElem('msgsub_contact');
-                swal('Please enter valid Email / Phone Number.', '', 'error');
-                return false;
-            }
 
             $('#msgsub_cloading').show();
             $.ajax({
